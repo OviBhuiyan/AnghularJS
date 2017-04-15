@@ -5,13 +5,12 @@
     <!--this is change test-->
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/Scripts.js"></script>
+    <script src="Scripts/Filter.js"></script>
     <link href="Style.css" rel="stylesheet" />
 </head>
 <body ng-app ="myModule">
     <div ng-controller="myController">
-        <input type="text" placeholder="Search city and name" ng-model="searchText" />
        
-     
          <br /><br />
         <table>
             <thead>
@@ -20,16 +19,15 @@
                     
                     <th>Gender</th>
                     <th>Salary</th>
-                    <th>City </th>
+                    
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="employee in employees | filter:search">
+                <tr ng-repeat="employee in employees">
                     <td>{{ employee.name }}</td>
-
-                    <td>{{ employee.gender }}</td>
+                    <td>{{ employee.gender  | gender}}</td>
                     <td>{{ employee.salary }}</td>
-                    <td>{{ employee.city }}</td>
+                   
                 </tr>
             </tbody>
         </table>

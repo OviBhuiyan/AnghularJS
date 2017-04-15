@@ -5,27 +5,16 @@ var myApp = angular
                 .controller("myController", function ($scope) {
 
                     var employees = [
-                  { name: "Ben", gender: "Male", salary: 55000, city: "London" },
-                  { name: "Sara", gender: "Female", salary: 68000, city: "Chennai" },
-                  { name: "Mark", gender: "Male", salary: 57000, city: "London" },
-                  { name: "Pam", gender: "Female", salary: 53000, city: "Chennai" },
-                  { name: "Todd", gender: "Male", salary: 60000, city: "London" },
+               { name: "Ben", gender: 1, salary: 55000 },
+               { name: "Sara", gender: 2, salary: 68000 },
+               { name: "Mark", gender: 1, salary: 57000 },
+               { name: "Pam", gender: 2, salary: 53000 },
+               { name: "Todd", gender: 3, salary: 60000 }
                     ];
 
                     $scope.employees = employees;
 
-                    $scope.search = function (item) {
-                        if ($scope.searchText == undefined) {
-                            return true;
-                        }
-                        else {
-                            if (item.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1 ||
-                                item.city.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1)
-                            {
-                                return true;
-                            }
-                        }
-                    }
+                   
                   
  });
 
