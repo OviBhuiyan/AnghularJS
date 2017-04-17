@@ -5,16 +5,16 @@ var myApp = angular
                 .controller("myController", function ($scope) {
 
                     var employees = [
-                 { name: "Ben", gender: "Male", city: "London", salary: 55000 },
-                 { name: "Sara", gender: "Female", city: "Chennai", salary: 68000 },
-                 { name: "Mark", gender: "Male", city: "Chicago", salary: 57000 },
-                 { name: "Pam", gender: "Female", city: "London", salary: 53000 },
-                 { name: "Todd", gender: "Male", city: "Chennai", salary: 60000 }
+                 { name: "Ben", gender: "Male", city: "London" },
+                 { name: "Sara", gender: "Female", city: "Chennai"},
+                 { name: "Mark", gender: "Male", city: "Chicago" },
+                 { name: "Pam", gender: "Female", city: "London" },
+                 { name: "Todd", gender: "Male", city: "Chennai" }
                     ];
 
 
                     $scope.employees = employees;
-
+                    $scope.employeeView = "EmployeeTable.html"
                    
                   
  });
