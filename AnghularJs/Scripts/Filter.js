@@ -3,7 +3,7 @@
 
 
 
-myApp.filter("gender", function () {
+app.filter("gender", function () {
     return function (gender) {
         switch (gender) {
             case 1:
