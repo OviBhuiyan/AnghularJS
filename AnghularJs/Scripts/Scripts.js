@@ -2,22 +2,14 @@
 
 var myApp = angular
                 .module("myModule", [])
-                .controller("myController", function ($scope) {
+                .controller("myController", function ($scope, $http) {
 
-                    var employees = [
-                 { name: "Ben", gender: "Male", city: "London" },
-                 { name: "Sara", gender: "Female", city: "Chennai"},
-                 { name: "Mark", gender: "Male", city: "Chicago" },
-                 { name: "Pam", gender: "Female", city: "London" },
-                 { name: "Todd", gender: "Male", city: "Chennai" }
-                    ];
+                    $http.get("EmployeeWebService.asmx/GetAllEmployee")
+                            .then(function (response) {
+                                $scope.employees = response.data;
+                            });
 
-
-                    $scope.employees = employees;
-                    $scope.employeeView = "EmployeeTable.html"
-                   
-                  
- });
+                });
 
 
 

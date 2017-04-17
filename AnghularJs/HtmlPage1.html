@@ -10,15 +10,24 @@
 </head>
 <body ng-app ="myModule">
     <div ng-controller="myController">
-        Select View :
-        <select ng-model="employeeView">
-            <option value="EmployeeTable.html">Table</option>
-            <option value="EmployeeList.html">List</option>
-        </select>
-       <br /><br />
-        <div ng-include="employeeView">
-
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.Id}}</td>
+                    <td>{{employee.Name}}</td>
+                    <td>{{employee.Gender}}</td>
+                    <td>{{employee.Salary}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
